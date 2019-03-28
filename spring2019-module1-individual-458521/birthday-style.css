@@ -1,0 +1,42 @@
+body {
+  background-color: lightblue;
+}
+
+
+h1{
+  text-align: center;
+  color:red;
+  font-family: Verdana, sans-serif;
+
+}
+
+img{
+  width: 100%;
+  height: auto;
+}
+.message{
+  font-family: Verdana, sans-serif;
+  color:red;
+  text-align: center;
+}
+.column{
+  flex:33.33%;
+  padding:10px;
+}
+
+.row{
+  display:flex;
+}
+.center{
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+  width:50%;
+}
+
+.signature{
+  font-family: Verdana, sans-serif;
+  color:red;
+  text-align: right;
+
+}
