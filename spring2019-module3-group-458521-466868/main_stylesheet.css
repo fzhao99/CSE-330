@@ -1,0 +1,186 @@
+body {
+    background-color: #f0ead6;
+}
+
+header {
+    font-size: 40px;
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+}
+
+h1 {
+    font-size: 30px;
+    font-family: 'Slabo 27px', serif;
+    margin-left: 60px;
+}
+
+a {
+    font-size: 24px;
+    font-family: 'Roboto Slab', serif;
+    text-decoration: none;
+    color: teal;
+}
+button{
+    padding:5px 15px; 
+    background:white; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+}
+
+a.story_title{
+    margin-left:60px;
+    font-weight: bold;
+}
+
+.profile{
+    display:inline-block;
+    margin: 10px 10px 10px 10px;
+}
+
+.logout{
+    display:inline-block;
+    margin: 10px 10px 10px 10px;
+}
+
+input[type=submit]{
+    padding:5px 15px; 
+    background:white; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+    margin: 5px 5px 5px 5px;
+}
+.story_submit{
+    margin-top:10px;
+    width:150px;
+}
+a#newssite{
+    text-align: left;
+}
+#newssite {
+    font-size: 40px;
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    color: black;
+}
+.inline_form{
+    display:inline-block;
+}
+.inline_header{
+    display:inline-block;
+    margin-right:50px;
+}
+#stories {
+    margin-left: 80px;
+}
+div.all_stories{
+    margin-top:30px;
+}
+div.author{
+    margin-left: 80px;
+}
+
+div.welcome {
+    text-align: right;
+    font-size: 16px;
+    font-family: 'Slabo 27px', serif;
+    margin-right: 30px;
+    font-weight:bold;
+}
+
+a.change_links{
+    font-family: 'Roboto Slab', serif;
+    text-decoration: none;
+    color:black;
+    margin-left:30px;
+    font-size: 100%;
+    font-weight:bold;
+}
+div.login {
+    text-align: right;
+    margin-right: 30px;
+}
+
+div.title {
+    font-size: 30px;
+    font-family: 'Roboto Slab', serif;
+    color: teal;
+}
+
+div.summary {
+    font-size: 18px;
+    font-family: 'Roboto Slab', serif;
+}
+
+div.author {
+    font-size: 18px;
+    font-family: 'Oswald', sans-serif;
+}
+
+div.story {
+    font-size: 14px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: 80px;
+}
+div.entry{
+    margin-top: 20px;
+}
+textarea, select{
+    resize:none;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    width: 500px;
+    font-family: 'Roboto Slab', serif;
+
+
+}
+select{
+    width: 500px;
+    height:40px;
+
+}
+
+#summary.edit{
+    height: 100px;
+}
+
+#content.edit{
+    height: 1000px;
+}
+
+div.comments {
+    font-size: 14px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#tags {
+    font-size: 24px;
+    font-family: 'Oswald', sans-serif;
+    margin-left: 60px;
+    color: black;
+    display:inline;
+}
+
+div.box {
+    text-align: center;
+}
+
+/* Default State */
+div.link_change {
+    background:  #f0ead6;
+    display:none;
+    color:  #f0ead6;
+    text-align: center;
+ }
+ select#select_tags{
+    margin: 10px 0px 10px 0px;
+
+ }
+ 
+ /* Toggled State */
+ input[type=checkbox]:checked ~ div {
+    display:inline;
+ }

@@ -1,0 +1,19 @@
++-----------+------------------+------------+-----------+
+| avg_grade | email_address    | first_name | last_name |
++-----------+------------------+------------+-----------+
+| 43.500000 | bharper@ffym.com | Ben        | Harper    |
+| 45.000000 | tArmz@rancid.com | Tim        | Armstrong |
++-----------+------------------+------------+-----------+
+2 rows in set (0.00 sec)
+
+
+select 
+	avg(grade) as avg_grade, students.email_address, students.first_name, students.last_name 
+from 
+	grades 
+join 
+	students on (grades.student_id = students.id) 
+group by 
+	student_id 
+having 
+	avg_grade <50;

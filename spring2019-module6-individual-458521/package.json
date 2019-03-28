@@ -1,0 +1,18 @@
+{
+  "name": "module_6",
+  "version": "1.0.0",
+  "description": "packages for module 6 of CSE330S spring 2019",
+  "main": "static_server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.org/cse330/spring2019-module6-individual-458521/src"
+  },
+  "dependencies": {
+    "mime": "^2.4.0"
+  }
+}

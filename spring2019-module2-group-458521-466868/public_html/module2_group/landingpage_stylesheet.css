@@ -1,0 +1,54 @@
+body {
+    font-size: 16px;
+    font-family: "Lucida Console", Monaco, monospace;
+    background-color: #3ec2ff;
+}
+header {
+    font-size: 20px;
+    text-align: center;
+    color:#0099cc;
+}
+
+h1 {
+    font-family: 'Bree Serif', serif;
+    font-size: 16px;
+    text-align: right;
+}
+
+h2 {
+    font-family: 'Bree Serif', serif;
+    font-size: 20px;
+
+}
+.logout{
+    position: absolute;
+    right: 25px;
+    font-family: "Lucida Console", Monaco, monospace;
+    color: plum;
+}
+
+.file_display{
+    padding: 5%;
+
+}
+
+.delete_button{
+    float:right;
+}
+
+.files {
+    margin-left: 75px;
+    text-align: left;
+}
+
+div.box {
+    margin: 30px 40% 30px 40%;
+    padding: 10px 10px 10px 10px;
+    border: 2px solid black;
+    border-radius: 30px;
+    background-color: white;
+}
+
+div.upload {
+    text-align: center;
+}

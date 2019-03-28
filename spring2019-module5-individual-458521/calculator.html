@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <link rel="stylesheet" type="text/css" href="main_stylesheet.css"/>
+  </head>
+  <body>
+
+<div class = "calculator">
+    <div class ="operations">
+        <label for="add"><input type="radio" name="operation" value="add" id="add" /> Add</label> &nbsp;
+        <label for="subtract"><input type="radio" name="operation" value="subtract" id="subtract" /> Subtract</label>
+        <label for="multiply"><input type="radio" name="operation" value="multiply" id="multiply" /> Multiply</label> &nbsp;
+        <label for="divide"><input type="radio" name="operation" value="divide" id="divide" /> Divide</label>
+    </div>
+
+    <div class ="input">
+        <label for="var1input">Value 1:</label>
+        <input type="number" step ="any"  name="varfield" id="var1input" />
+        <label for="var2input">Value 2:</label>
+        <input type="number" step ="any" name="varfield" id="var2input"/>
+    </div>
+
+    <div class ="output">
+            <output id="result">Output will appear here</output> 
+    </div>
+        
+
+ 
+</div>
+<script>
+        function add(numb1, numb2){
+            return numb1 + numb2;
+        }
+        function subtract(numb1, numb2){
+            return numb1 - numb2;
+    
+        }
+        function multiply(numb1, numb2){
+            return numb1 * numb2;
+    
+        }
+        function divide(numb1,numb2){
+            if(numb2 ==0){
+                alert("Divide by zero error! Please change the second input to remedy this issue");
+            }
+            else{
+                return numb1/numb2;
+            }
+        }
+
+        //determine which operation is selected
+        function determineOperation(){
+        
+            var operation_pointers = document.getElementsByName("operation");
+            var which_operation = null;
+            for(var i =0; i<operation_pointers.length; i++){
+                if(operation_pointers[i].checked){
+                    which_operation = operation_pointers[i].value;
+                    break;
+                }
+            }
+            return which_operation;
+
+
+        }
+        //handle change to answer after operation selection is changed
+        function calcAnsAfterOpChange(){
+            let which_operation = determineOperation();
+            let val1 = parseInt(document.getElementById("var1input").value);
+            let val2 = parseInt(document.getElementById("var2input").value);
+            let ans = null;
+            if(isNaN(val1) || isNaN(val2)){
+                document.getElementById("result").textContent = "Output will appear here after both fields are inputed";
+                return;
+            }
+            else{
+                if(which_operation == "add"){
+                    ans = add(val1,val2);
+                }
+                if(which_operation == "subtract"){
+                    ans = subtract(val1,val2);
+                }
+                if(which_operation == "multiply"){
+                    ans = multiply(val1,val2);
+                }
+                if(which_operation == "divide"){
+                    ans = divide(val1,val2);
+                }
+                document.getElementById("result").textContent = "Result: "+ans;
+        }
+        }
+
+        //handle change to new answer after field is changed
+        function calcAnsAfterFieldChange(){
+            let val1 = parseInt(document.getElementById("var1input").value);
+            let val2 = parseInt(document.getElementById("var2input").value);
+            let which_operation = determineOperation();
+            let ans = null;
+
+            if(which_operation == null){
+                return;
+            }
+            else if(isNaN(val1) || isNaN(val2)){
+                document.getElementById("result").textContent = "Output will appear here after both fields are inputed";
+                return;
+            }
+            else{
+                if(which_operation == "add"){
+                    ans = add(val1,val2);
+                }
+                if(which_operation == "subtract"){
+                    ans = subtract(val1,val2);
+                }
+                if(which_operation == "multiply"){
+                    ans = multiply(val1,val2);
+                }
+                if(which_operation == "divide"){
+                    ans = divide(val1,val2);
+                }
+                document.getElementById("result").textContent = "Result: "+ans;
+            }
+        }
+
+        //main event listeners
+        document.addEventListener("DOMContentLoaded", function(){
+            var operations = document.getElementsByName("operation");
+            let which_operation = determineOperation();
+
+            for (var i=0; i<operations.length;i++){
+                operations[i].addEventListener('click',calcAnsAfterOpChange);
+            }
+           
+           document.getElementsByName("varfield")[0].addEventListener("change",calcAnsAfterFieldChange);
+           document.getElementsByName("varfield")[1].addEventListener("change",calcAnsAfterFieldChange);
+           
+
+
+        }, false);
+
+
+        
+        
+    </script>
+  </body>
+</html>
